@@ -1,0 +1,278 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5549E6727B91D282",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../11_13_Smartfan.gen/sources_1/bd/smart_fan",
+      "name": "smart_fan",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "PWM_MEM_Gen_0": "",
+      "PWM_Generator_0": "",
+      "shiftRegister_0": ""
+    },
+    "ports": {
+      "i_addr": {
+        "direction": "I"
+      },
+      "i_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "smart_fan_i_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "i_cs": {
+        "direction": "I"
+      },
+      "i_en": {
+        "direction": "I"
+      },
+      "i_pwm_value": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "o_pwm_clk": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "smart_fan_PWM_MEM_Gen_0_0_o_pwm_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "sysclk": {
+        "direction": "I"
+      },
+      "i_rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "o_fndFont": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "o_fndSelect": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "o_pwm_out": {
+        "direction": "O"
+      },
+      "i_mosi": {
+        "direction": "I"
+      },
+      "i_shift_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "smart_fan_i_shift_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "i_ss": {
+        "direction": "I"
+      },
+      "o_data": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "i_sw": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      }
+    },
+    "components": {
+      "PWM_MEM_Gen_0": {
+        "vlnv": "xilinx.com:user:PWM_MEM_Gen:1.0",
+        "xci_name": "smart_fan_PWM_MEM_Gen_0_0",
+        "xci_path": "ip\\smart_fan_PWM_MEM_Gen_0_0\\smart_fan_PWM_MEM_Gen_0_0.xci",
+        "inst_hier_path": "PWM_MEM_Gen_0"
+      },
+      "PWM_Generator_0": {
+        "vlnv": "xilinx.com:user:PWM_Generator:1.0",
+        "xci_name": "smart_fan_PWM_Generator_0_0",
+        "xci_path": "ip\\smart_fan_PWM_Generator_0_0\\smart_fan_PWM_Generator_0_0.xci",
+        "inst_hier_path": "PWM_Generator_0"
+      },
+      "shiftRegister_0": {
+        "vlnv": "xilinx.com:user:shiftRegister:1.0",
+        "xci_name": "smart_fan_shiftRegister_0_0",
+        "xci_path": "ip\\smart_fan_shiftRegister_0_0\\smart_fan_shiftRegister_0_0.xci",
+        "inst_hier_path": "shiftRegister_0"
+      }
+    },
+    "nets": {
+      "i_addr_0_1": {
+        "ports": [
+          "i_addr",
+          "PWM_MEM_Gen_0/i_addr"
+        ]
+      },
+      "i_clk_0_1": {
+        "ports": [
+          "i_clk",
+          "PWM_MEM_Gen_0/i_clk"
+        ]
+      },
+      "i_cs_0_1": {
+        "ports": [
+          "i_cs",
+          "PWM_MEM_Gen_0/i_cs"
+        ]
+      },
+      "i_en_0_1": {
+        "ports": [
+          "i_en",
+          "PWM_MEM_Gen_0/i_en"
+        ]
+      },
+      "i_pwm_value_0_1": {
+        "ports": [
+          "i_pwm_value",
+          "PWM_MEM_Gen_0/i_pwm_value"
+        ]
+      },
+      "PWM_MEM_Gen_0_o_pwm_clk": {
+        "ports": [
+          "PWM_MEM_Gen_0/o_pwm_clk",
+          "o_pwm_clk"
+        ]
+      },
+      "sysclk_0_1": {
+        "ports": [
+          "sysclk",
+          "PWM_MEM_Gen_0/sysclk",
+          "PWM_Generator_0/sysclk"
+        ]
+      },
+      "i_rst_n_0_1": {
+        "ports": [
+          "i_rst_n",
+          "PWM_Generator_0/i_rst_n"
+        ]
+      },
+      "PWM_Generator_0_o_fndFont": {
+        "ports": [
+          "PWM_Generator_0/o_fndFont",
+          "o_fndFont"
+        ]
+      },
+      "PWM_Generator_0_o_fndSelect": {
+        "ports": [
+          "PWM_Generator_0/o_fndSelect",
+          "o_fndSelect"
+        ]
+      },
+      "PWM_Generator_0_o_pwm_out": {
+        "ports": [
+          "PWM_Generator_0/o_pwm_out",
+          "o_pwm_out"
+        ]
+      },
+      "i_mosi_0_1": {
+        "ports": [
+          "i_mosi",
+          "shiftRegister_0/i_mosi"
+        ]
+      },
+      "i_shift_clk_0_1": {
+        "ports": [
+          "i_shift_clk",
+          "shiftRegister_0/i_shift_clk"
+        ]
+      },
+      "i_ss_0_1": {
+        "ports": [
+          "i_ss",
+          "shiftRegister_0/i_ss"
+        ]
+      },
+      "shiftRegister_0_o_data": {
+        "ports": [
+          "shiftRegister_0/o_data",
+          "o_data"
+        ]
+      },
+      "i_sw_0_1": {
+        "ports": [
+          "i_sw",
+          "PWM_Generator_0/i_sw"
+        ]
+      }
+    }
+  }
+}
